@@ -1,0 +1,45 @@
+#:kivy 1.0
+
+<Container>: 
+
+    label_widget: mainLabel
+    BoxLayout:
+        canvas.before:
+            Color:
+                rgba: 255, 0, 255, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        orientation: 'vertical'
+        Label:
+            id: mainLabel
+            text: '[color=ffc0cb]' '[/color]'
+            font_size: "25sp"
+        Button:
+            size_hint: 0.3, 0.3
+            pos_hint:{"center_x":0.5,"center_y":1}
+            text: "Сброс"
+            font_size: '56sp'
+
+            on_release:
+                root.res()
+
+        BoxLayout:
+            orientation: 'horizontal'
+            spacing: 30   
+            padding: [30,0,30,30]         
+            Button:
+                size_hint: 0.3, 0.3
+                text: "-"
+                font_size: '56sp'
+
+                on_release:
+                    root.dec()
+
+            Button:
+                size_hint: 0.3, 0.3           
+                text: "+"
+                font_size: '56sp'
+                
+                on_release:
+                    root.inc()
