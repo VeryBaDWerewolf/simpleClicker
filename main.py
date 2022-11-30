@@ -6,7 +6,7 @@ from kivy.core.window import Window
 from kivy.graphics import Color, Rectangle
 from kivy.properties import ObjectProperty
 
-__version__ = '0.0.2'
+__version__ = '0.0.3'
 
 
 
