@@ -23,7 +23,7 @@ class Count:
     def result(self) -> str:
         return str(self.i)
 
-class Container(BoxLayout): 2
+class Container(BoxLayout): 
     label_widget = ObjectProperty()
 
     app = Count()
